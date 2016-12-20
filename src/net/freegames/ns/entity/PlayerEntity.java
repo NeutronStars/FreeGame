@@ -28,10 +28,10 @@ public class PlayerEntity extends Entity{
 	
 		Vector3f position = new Vector3f(getCamera().getPosition().toVector3f());
 		
-		if(Keyboard.isKeyDown(Keyboard.KEY_UP)) position.add(getCamera().getDirectionLook(90.0F).mul(new Vector3f(-FreeGame.getSpeed(), -FreeGame.getSpeed(), -FreeGame.getSpeed())));
-		if(Keyboard.isKeyDown(Keyboard.KEY_DOWN)) position.add(getCamera().getDirectionLook(90.0f).mul(new Vector3f(FreeGame.getSpeed(), FreeGame.getSpeed(), FreeGame.getSpeed())));
-		if(Keyboard.isKeyDown(Keyboard.KEY_LEFT)) position.add(getCamera().getDirectionLook(0.0F).mul(new Vector3f(-FreeGame.getSpeed(), -FreeGame.getSpeed(), -FreeGame.getSpeed())));
-		if(Keyboard.isKeyDown(Keyboard.KEY_RIGHT)) position.add(getCamera().getDirectionLook(0.0F).mul(new Vector3f(FreeGame.getSpeed(), FreeGame.getSpeed(), FreeGame.getSpeed())));
+		if(Keyboard.isKeyDown(Keyboard.KEY_UP) || Keyboard.isKeyDown(Keyboard.KEY_Z)) position.add(getCamera().getDirectionLook(90.0F).mul(new Vector3f(-FreeGame.getSpeed(), -FreeGame.getSpeed(), -FreeGame.getSpeed())));
+		if(Keyboard.isKeyDown(Keyboard.KEY_DOWN) || Keyboard.isKeyDown(Keyboard.KEY_S)) position.add(getCamera().getDirectionLook(90.0f).mul(new Vector3f(FreeGame.getSpeed(), FreeGame.getSpeed(), FreeGame.getSpeed())));
+		if(Keyboard.isKeyDown(Keyboard.KEY_LEFT) || Keyboard.isKeyDown(Keyboard.KEY_Q)) position.add(getCamera().getDirectionLook(0.0F).mul(new Vector3f(-FreeGame.getSpeed(), -FreeGame.getSpeed(), -FreeGame.getSpeed())));
+		if(Keyboard.isKeyDown(Keyboard.KEY_RIGHT) || Keyboard.isKeyDown(Keyboard.KEY_D)) position.add(getCamera().getDirectionLook(0.0F).mul(new Vector3f(FreeGame.getSpeed(), FreeGame.getSpeed(), FreeGame.getSpeed())));
 		
 //		position = new Vector3f(FreeGame.getCamera().getPosition());
 		
